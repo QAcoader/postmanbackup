@@ -397,6 +397,250 @@
 								"url": "https://wss1.uat-wss2.cex.nl.webuy.dev/v3/wesellorders/28034/process"
 							},
 							"response": []
+						},
+						{
+							"name": "v3/basket/{id}",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "299b4c83-c221-4a70-b7c7-ffa0349043e3",
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "ac7d51bf-168c-40d6-b250-e3d4780a067a",
+										"exec": [
+											"pm.sendRequest({",
+											"    url: 'https://uat-oauth2.cex.nl.webuy.dev/token',",
+											"    method: 'POST',",
+											"    header: {",
+											"        'Content-Type': 'application/x-www-form-urlencoded'  // Form data for token requests",
+											"    },",
+											"    body: {",
+											"        mode: 'urlencoded',",
+											"        urlencoded: [",
+											"            { key: 'client_id', value: 'cex' },",
+											"            { key: 'client_secret', value: 'cexsecret' },",
+											"            { key: 'grant_type', value: 'password' },",
+											"            { key: 'username', value: 'gjadhav@webuy.com' },",
+											"            { key: 'password', value: '1234567' }",
+											"        ]",
+											"    }",
+											"}, function (err, res) {",
+											"    if (err) {",
+											"        console.log('Error fetching token:', err);",
+											"    } else {",
+											"        var jsonData = res.json();",
+											"        if (jsonData.access_token) {",
+											"            pm.environment.set('accessToken', jsonData.access_token);  // Store token in environment variable",
+											"            // Alternatively, use ",
+											"            pm.collectionVariables.set('accessToken', jsonData.access_token);",
+											"        } else {",
+											"            console.log('Token not found in response:', res.text());",
+											"        }",
+											"    }",
+											"    ",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "ba959f90-4714-4830-856b-0d6b712dc3c5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "bulkItemData",
+											"value": "{\"wesellItems\":[{\"boxId\":\"711719455219\",\"quantity\":1}, {\"boxId\":\"711719810919\",\"quantity\":1,\"deliveryMethodId\":2}, {\"boxId\":\"711719147282\",\"quantity\":1}],\"webuyItems\":[]}",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "isBulk",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "mode",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "boxId",
+											"value": "0454962DPB01",
+											"type": "text"
+										},
+										{
+											"key": "quantity",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "boxId",
+											"value": "33590260006613207210121059",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "boxId",
+											"value": "sbotttctnppmb",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "boxId",
+											"value": "5017239160127",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "boxId",
+											"value": "sfigbbujunferdasdrib",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "boxId",
+											"value": "sbhugbluhat69mn",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "boxId",
+											"value": "SACCBABO2MXPBLA01",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "boxId",
+											"value": "5030917125850",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "boxId",
+											"value": "4515260011742",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "boxId",
+											"value": "slapappmba52i5189a",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "boxId",
+											"value": "SMEMMSD64",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "boxId",
+											"value": "soutfisprilaulea",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "boxId",
+											"value": "sintmegblo100pieb",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "boxId",
+											"value": "SACCBABO2MXPBLA01",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "boxId",
+											"value": "5030917103766",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "boxId",
+											"value": "619659022990",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "boxId",
+											"value": "SACCAPPMD818ZM",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "boxId",
+											"value": "sx360e002a",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "boxId",
+											"value": "5026555410212",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "boxId",
+											"value": "8435153639128",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "boxId",
+											"value": "711719810919",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "deliveryMethodId",
+											"value": "2",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "memberId",
+											"value": "522625004516937967",
+											"type": "text"
+										},
+										{
+											"key": "accessToken",
+											"value": "{{accessToken}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": "https://wss1.uat-wss2.cex.nl.webuy.dev/v3/basket/522625004516937967"
+							},
+							"response": []
 						}
 					],
 					"id": "0e00dff1-2991-446b-bda2-220bc31ecd80"
