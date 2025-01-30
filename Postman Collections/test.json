@@ -1,0 +1,1596 @@
+{
+	"info": {
+		"_postman_id": "15a9be43-8806-43ce-8ffd-65527ae4dd37",
+		"name": "combine membership",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "combinemembership Copy",
+			"item": [
+				{
+					"name": "Get combine membership data fields",
+					"id": "010aa286-0cc4-48d4-a3af-ec69959c8be9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{wss_url}}/v1/members/combinemembershipdatafields"
+					},
+					"response": []
+				},
+				{
+					"name": "Get combine membership token details",
+					"id": "712c1e6e-c2cb-4308-a6d5-85d65fc80d2b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{wss_url}}/v1/members/combinemembershiptokendetails?tinyUrlCode=MzB3iNm&platformId=15",
+							"host": [
+								"{{wss_url}}"
+							],
+							"path": [
+								"v1",
+								"members",
+								"combinemembershiptokendetails"
+							],
+							"query": [
+								{
+									"key": "tokenTypeId",
+									"value": "6",
+									"disabled": true
+								},
+								{
+									"key": "tinyUrlCode",
+									"value": "MzB3iNm"
+								},
+								{
+									"key": "workstation",
+									"value": "wss",
+									"disabled": true
+								},
+								{
+									"key": "versionNumber",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "platformId",
+									"value": "15"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "v3/members/{umId}/combinemembership",
+					"id": "21f28f64-9079-497a-b9c4-ea3c5634003b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "customerId",
+									"value": "UTWATF13351395",
+									"description": " BK1365",
+									"type": "text"
+								},
+								{
+									"key": "addedBy",
+									"value": "534626819920363891",
+									"type": "text"
+								},
+								{
+									"key": "workstation",
+									"value": "wss",
+									"description": "1",
+									"type": "text"
+								},
+								{
+									"key": "versionNumber",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "platformId",
+									"value": "18",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": "{{wss_url}}/v1/members/540892977422148029/combinemembership"
+					},
+					"response": [
+						{
+							"id": "07cb92d4-3d5a-4608-a84f-76b578eb71cc",
+							"name": "v3/members/550811139257142341/combinemembership",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "customerId",
+											"value": "ET11281",
+											"type": "text"
+										},
+										{
+											"key": "combineFields",
+											"value": "{\"4\":1,\"6\":1,\"7\":1,\"8\":1,\"9\":2,\"10\":1,\"11\":1,\"12\":1,\"13\":1,\"14\":1,\"18\":1,\"19\":2,\"20\":2}",
+											"type": "text"
+										},
+										{
+											"key": "staffId",
+											"value": "534626819920363891",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{wss_url}}/v3/members/534626819920363891/combinemembership"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 08 Nov 2023 11:19:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"response\": {\n        \"ack\": \"Failure\",\n        \"data\": \"\",\n        \"error\": {\n            \"code\": 1670,\n            \"internal_message\": \"Invalid umId\",\n            \"moreInfo\": {\n                \"errorDescription\": \"Combining membership is already initiated for UMID : 534626819920363891\"\n            }\n        }\n    }\n}"
+						},
+						{
+							"id": "82281db3-65dc-4e6a-b0ad-99b99551ef81",
+							"name": "v3/members/{umId}/combinemembership-success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "customerId",
+											"value": "WZ13346260",
+											"description": " BK1365",
+											"type": "text"
+										},
+										{
+											"key": "combineFields",
+											"value": "{\"4\":2,\"6\":2,\"7\":2,\"9\":2,\"10\":2}",
+											"type": "text"
+										},
+										{
+											"key": "addedBy",
+											"value": "534626819920363891",
+											"type": "text"
+										},
+										{
+											"key": "workstation",
+											"value": "wss",
+											"description": "1",
+											"type": "text"
+										},
+										{
+											"key": "versionNumber",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "platformId",
+											"value": "18",
+											"type": "text"
+										},
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": "{{wss_url}}/v1/members/528159783560159719/combinemembership"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Jan 2024 10:25:38 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "Date"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"response\": {\n        \"ack\": \"Success\",\n        \"data\": {\n            \"combineMembershipCode\": \"244171\"\n        },\n        \"error\": {\n            \"code\": \"\",\n            \"internal_message\": \"\",\n            \"moreInfo\": []\n        }\n    }\n}"
+						},
+						{
+							"id": "128ac4f0-3c7c-423d-80fc-e4a080b5edfe",
+							"name": "v3/members/{umId}/combinemembership-1841",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "customerId",
+											"value": "WZ13346260",
+											"description": " BK1365",
+											"type": "text"
+										},
+										{
+											"key": "combineFields",
+											"value": "{\"4\":2,\"6\":2,\"7\":2,\"9\":2,\"10\":2}",
+											"type": "text"
+										},
+										{
+											"key": "addedBy",
+											"value": "534626819920363891",
+											"type": "text"
+										},
+										{
+											"key": "workstation",
+											"value": "wss",
+											"description": "1",
+											"type": "text"
+										},
+										{
+											"key": "versionNumber",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "platformId",
+											"value": "18",
+											"type": "text"
+										},
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": "{{wss_url}}/v1/members/528159783560159719/combinemembership"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Jan 2024 10:35:38 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"response\": {\n        \"ack\": \"Failure\",\n        \"data\": \"\",\n        \"error\": {\n            \"code\": 1841,\n            \"internal_message\": \"Invalid umId or customerId\",\n            \"moreInfo\": {\n                \"errorDescription\": \"Combining membership is already initiated for UMID : 528159783560159719\"\n            }\n        }\n    }\n}"
+						},
+						{
+							"id": "3e00c968-31be-45f5-80e1-3f20acc4fb54",
+							"name": "v3/members/{umId}/combinemembership-1841",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "customerId",
+											"value": "WZ13346260",
+											"description": " BK1365",
+											"type": "text"
+										},
+										{
+											"key": "combineFields",
+											"value": "{\"4\":2,\"6\":2,\"7\":2,\"9\":2,\"10\":2}",
+											"type": "text"
+										},
+										{
+											"key": "addedBy",
+											"value": "534626819920363891",
+											"type": "text"
+										},
+										{
+											"key": "workstation",
+											"value": "wss",
+											"description": "1",
+											"type": "text"
+										},
+										{
+											"key": "versionNumber",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "platformId",
+											"value": "18",
+											"type": "text"
+										},
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": "{{wss_url}}/v1/members/528159783560159719/combinemembership"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Jan 2024 16:53:48 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"response\": {\n        \"ack\": \"Failure\",\n        \"data\": \"\",\n        \"error\": {\n            \"code\": 1841,\n            \"internal_message\": \"Invalid umId or customerId\",\n            \"moreInfo\": {\n                \"errorDescription\": \"Combining membership is already initiated for UMID : 528159783560159719\"\n            }\n        }\n    }\n}"
+						},
+						{
+							"id": "3b8b5523-2ea0-4db9-9eef-2bd92f71378e",
+							"name": "success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "customerId",
+											"value": "WZ13346260",
+											"description": " BK1365",
+											"type": "text"
+										},
+										{
+											"key": "combineFields",
+											"value": "{\"4\":2,\"6\":2,\"7\":2,\"9\":2,\"10\":2}",
+											"type": "text"
+										},
+										{
+											"key": "addedBy",
+											"value": "534626819920363891",
+											"type": "text"
+										},
+										{
+											"key": "workstation",
+											"value": "wss",
+											"description": "1",
+											"type": "text"
+										},
+										{
+											"key": "versionNumber",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "platformId",
+											"value": "18",
+											"type": "text"
+										},
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": "{{wss_url}}/v1/members/528159783560159719/combinemembership"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Jan 2024 16:55:02 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "Date"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"response\": {\n        \"ack\": \"Success\",\n        \"data\": {\n            \"combineMembershipCode\": \"167620\"\n        },\n        \"error\": {\n            \"code\": \"\",\n            \"internal_message\": \"\",\n            \"moreInfo\": []\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "{{wss_url}}/v1/members/cancelcombinemembership",
+					"id": "56dac276-c258-4ca1-984d-65af1fa96d2c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "workstation",
+									"value": "mepos",
+									"type": "text"
+								},
+								{
+									"key": "versionNumber",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "platformId",
+									"value": "18",
+									"type": "text"
+								},
+								{
+									"key": "addedBy",
+									"value": "23232",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "customerId",
+									"value": "WZ13346260",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{wss_url}}/v1/members/cancelcombinemembership"
+					},
+					"response": []
+				},
+				{
+					"name": "Resend combine membership code",
+					"id": "26e0617a-2585-4378-bdfb-0dbc1332df37",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "umId",
+									"value": "528159783560159719",
+									"type": "text"
+								},
+								{
+									"key": "workstation",
+									"value": "WSS",
+									"type": "text"
+								},
+								{
+									"key": "versionNumber",
+									"value": "2.11.1",
+									"type": "text"
+								},
+								{
+									"key": "platformId",
+									"value": "26",
+									"type": "text"
+								},
+								{
+									"key": "customerId",
+									"value": "WZ13346260",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "addedBy",
+									"value": "534626819920363891",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{wss_url}}/v1/members/resendcombinemembershipcode"
+					},
+					"response": [
+						{
+							"id": "6ae3ac6b-f567-4724-99ba-789701453ada",
+							"name": "Resend combine membership code-1253",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "umId",
+											"value": "528159783560159719",
+											"type": "text"
+										},
+										{
+											"key": "workstation",
+											"value": "WSS",
+											"type": "text"
+										},
+										{
+											"key": "versionNumber",
+											"value": "2.11.1",
+											"type": "text"
+										},
+										{
+											"key": "platformId",
+											"value": "26",
+											"type": "text"
+										},
+										{
+											"key": "customerId",
+											"value": "WZ13346260",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "addedBy",
+											"value": "534626819920363891",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{wss_url}}/v1/members/resendcombinemembershipcode"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Jan 2024 10:50:49 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"response\": {\n        \"ack\": \"Failure\",\n        \"data\": \"\",\n        \"error\": {\n            \"code\": 1253,\n            \"internal_message\": \"Maximum attempt to resend email or sms exceeded\",\n            \"moreInfo\": []\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "v3/members/verifycombinemembershipcode",
+					"id": "7cd2bf5b-7b35-4ea2-bba0-fe6b1d9e3eb7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "text"
+								},
+								{
+									"key": "combineMembershipCode",
+									"value": "{{code}}",
+									"type": "text"
+								},
+								{
+									"key": "workstation",
+									"value": "WSS",
+									"type": "text"
+								},
+								{
+									"key": "platformId",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "versionNumber",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "tinyUrlCode",
+									"value": "{{token}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{wss_url}}/v1/members/{{member_id}}/verifycombinemembershipcode"
+					},
+					"response": [
+						{
+							"id": "3fd72942-f29f-42e0-a0a8-dff74ecae2e1",
+							"name": "v3/members/validatecombinecode",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "token",
+											"value": "VG1UNWhHc3d6UFAvV1pxTWFiRzhkZXZLNlltMzlNaE5BN2dKQTQxR0F3WmtacEZQUE93TkN2OU1GMmVrU1RrVm5SMzI5WUZwTWRXNjVMUEdnQkgzVDRLUThjbkZJQmtFWTliZnV5RHcwT1VGSjFReTlJcEV4cklhK0x4OVprM1gzdGhTTFhhdkRpaC9JcGZPMlVGczNVR1hGMnhPSlpkWVo5YTI5NlZDaHhJWFNhNGxPTUxXTlNYMFVGa2srWnI1",
+											"type": "text"
+										},
+										{
+											"key": "combineMembershipCode",
+											"value": "218151",
+											"type": "text"
+										},
+										{
+											"key": "workstation",
+											"value": "WSS",
+											"type": "text"
+										},
+										{
+											"key": "platformId",
+											"value": "11",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{wss_url}}/v3/members/validatecombinemembershipcode"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Nov 2023 08:43:05 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"response\": {\n        \"ack\": \"Success\",\n        \"data\": true,\n        \"error\": {\n            \"code\": \"\",\n            \"internal_message\": \"\",\n            \"moreInfo\": []\n        }\n    }\n}"
+						}
+					]
+				}
+			],
+			"id": "481f4392-3cc8-4ace-97e0-5ea49875ac07"
+		},
+		{
+			"name": "{{wss_url}}/v1/members/528159783560159719/combinemembership",
+			"id": "cc03c6ba-36a8-43b6-bd23-8272ebd7fc8b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "customerId",
+							"value": "WZ13346260",
+							"description": " BK1365",
+							"type": "text"
+						},
+						{
+							"key": "combineFields",
+							"value": "{\"4\":2,\"6\":2,\"7\":2,\"9\":2,\"10\":2}",
+							"type": "text"
+						},
+						{
+							"key": "addedBy",
+							"value": "534626819920363891",
+							"type": "text"
+						},
+						{
+							"key": "workstation",
+							"value": "wss",
+							"description": "1",
+							"type": "text"
+						},
+						{
+							"key": "versionNumber",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "platformId",
+							"value": "18",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": "{{wss_url}}/v1/members/528159783560159719/combinemembership"
+			},
+			"response": [
+				{
+					"id": "444a8f87-0540-4367-8dae-5faa5484b2ab",
+					"name": "{{wss_url}}/v1/members/528159783560159719/combinemembership-1833",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "customerId",
+									"value": "BN52862",
+									"description": " BK1365",
+									"type": "text"
+								},
+								{
+									"key": "combineFields",
+									"value": "{\"4\":2,\"6\":2,\"7\":2,\"9\":2,\"10\":2}",
+									"type": "text"
+								},
+								{
+									"key": "addedBy",
+									"value": "534626819920363891",
+									"type": "text"
+								},
+								{
+									"key": "workstation",
+									"value": "wss",
+									"description": "1",
+									"type": "text"
+								},
+								{
+									"key": "versionNumber",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "platformId",
+									"value": "18",
+									"type": "text"
+								},
+								{
+									"key": "combineFields",
+									"value": "{\"1\":1}",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": "{{wss_url}}/v1/members/540930950305947978/combinemembership"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Feb 2024 16:35:49 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"response\": {\n        \"ack\": \"Failure\",\n        \"data\": \"\",\n        \"error\": {\n            \"code\": 1833,\n            \"internal_message\": \"Invalid combineFields\",\n            \"moreInfo\": {\n                \"errorDescription\": \"Missing value for field CardNumber\"\n            }\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "{{wss_url}}/v1/members/528159783560159719/combinemembership",
+			"id": "0f933111-52a8-45a0-8f34-c7cc28997fbb",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "customerId",
+							"value": "BN52862",
+							"description": " BK1365",
+							"type": "text"
+						},
+						{
+							"key": "combineFields",
+							"value": "{\"4\":2,\"6\":2,\"7\":2,\"9\":2,\"10\":2}",
+							"type": "text"
+						},
+						{
+							"key": "addedBy",
+							"value": "534626819920363891",
+							"type": "text"
+						},
+						{
+							"key": "workstation",
+							"value": "wss",
+							"description": "1",
+							"type": "text"
+						},
+						{
+							"key": "versionNumber",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "platformId",
+							"value": "18",
+							"type": "text"
+						},
+						{
+							"key": "combineFields",
+							"value": "{\"1\":1}",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": "{{wss_url}}/v1/members/540930950305947978/combinemembership"
+			},
+			"response": [
+				{
+					"id": "70007936-0e4d-44df-a177-6b922d8af975",
+					"name": "{{wss_url}}/v1/members/528159783560159719/combinemembership-1833",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "customerId",
+									"value": "BN52862",
+									"description": " BK1365",
+									"type": "text"
+								},
+								{
+									"key": "combineFields",
+									"value": "{\"4\":2,\"6\":2,\"7\":2,\"9\":2,\"10\":2}",
+									"type": "text"
+								},
+								{
+									"key": "addedBy",
+									"value": "534626819920363891",
+									"type": "text"
+								},
+								{
+									"key": "workstation",
+									"value": "wss",
+									"description": "1",
+									"type": "text"
+								},
+								{
+									"key": "versionNumber",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "platformId",
+									"value": "18",
+									"type": "text"
+								},
+								{
+									"key": "combineFields",
+									"value": "{\"1\":1}",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": "{{wss_url}}/v1/members/540930950305947978/combinemembership"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Feb 2024 16:35:49 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"response\": {\n        \"ack\": \"Failure\",\n        \"data\": \"\",\n        \"error\": {\n            \"code\": 1833,\n            \"internal_message\": \"Invalid combineFields\",\n            \"moreInfo\": {\n                \"errorDescription\": \"Missing value for field CardNumber\"\n            }\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "{{unifiedurl}}/v1/members",
+			"id": "84eab9ed-f201-4614-a60f-f41d02a21da3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "workstation",
+							"value": "WSS",
+							"type": "text"
+						},
+						{
+							"key": "platformId",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "versionNumber",
+							"value": "1.1.1",
+							"type": "text"
+						},
+						{
+							"key": "firstName",
+							"value": "ganesh",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "jadhav",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "combinem12@webuy.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "acceptAgreement",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "titleId",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "consentTypeIds",
+							"value": "[1]",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "contactByEmail",
+							"value": "0",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "contactBySms",
+							"value": "0",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "timezone",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{unifiedurl}}/v1/members"
+			},
+			"response": []
+		},
+		{
+			"name": "https://unified.uat-api.uk.webuy.dev/v1/members/540890953406226914/unlockonlineaccess",
+			"id": "a15ea7de-0402-45c1-99fd-c930cf705f9e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "unlockOnlineAccessCode",
+							"value": "361014",
+							"type": "text"
+						},
+						{
+							"key": "workstation",
+							"value": "WSS",
+							"type": "text"
+						},
+						{
+							"key": "platformId",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "versionNumber",
+							"value": "1.1.1.1",
+							"type": "text"
+						},
+						{
+							"key": "tinyUrlCode",
+							"value": "MTQw2Zj",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "apitestingon09@webuy.com",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": "https://unified.uat-api.uk.webuy.dev/v1/members/540890953406226914/unlockonlineaccess"
+			},
+			"response": []
+		},
+		{
+			"name": "https://unified.uat-api.uk.webuy.dev/v1/members/1053946763665621144/combinemembership",
+			"id": "9a848eb4-2ae3-491c-89d8-b7ca51124869",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "customerId",
+							"value": "UTWATF13351395",
+							"type": "text"
+						},
+						{
+							"key": "combineMembershipCode",
+							"value": "12",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "tinyUrlCode",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "workstation",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "versionNumber",
+							"value": "1.1.1",
+							"type": "text"
+						},
+						{
+							"key": "platformId",
+							"value": "17",
+							"type": "text"
+						},
+						{
+							"key": "addedBy",
+							"value": "666",
+							"type": "text"
+						},
+						{
+							"key": "combineFields",
+							"value": "{1:1,2:1,3:2}",
+							"type": "text"
+						}
+					]
+				},
+				"url": "https://unified.uat-api.uk.webuy.dev/v1/members/1053946763665621144/combinemembership"
+			},
+			"response": []
+		},
+		{
+			"name": "https://unified.uat-api.uk.webuy.dev/v1/members/combinemembershiptokendetails?tinyUrlCode=Mh1hjsw&platformId=17",
+			"id": "1f1bdee8-bb17-40ae-a1f5-4b3ba199f3f3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://unified.uat-api.uk.webuy.dev/v1/members/combinemembershiptokendetails?tinyUrlCode=Mh1hjsw&platformId=17",
+					"protocol": "https",
+					"host": [
+						"unified",
+						"uat-api",
+						"uk",
+						"webuy",
+						"dev"
+					],
+					"path": [
+						"v1",
+						"members",
+						"combinemembershiptokendetails"
+					],
+					"query": [
+						{
+							"key": "tinyUrlCode",
+							"value": "Mh1hjsw"
+						},
+						{
+							"key": "platformId",
+							"value": "17"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://unified.uat-api.uk.webuy.dev/v1/customers/search?platformId=22&workstation=1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "282495ad-3844-42bd-b2d3-732b04f0234c",
+						"exec": [
+							"pm.environment.get(\"variable_key\");",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "65eeb444-d596-48f5-ab35-677541fd1bd5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://unified.uat-api.uk.webuy.dev/v1/customers/search?platformId=22&workstation=1",
+					"protocol": "https",
+					"host": [
+						"unified",
+						"uat-api",
+						"uk",
+						"webuy",
+						"dev"
+					],
+					"path": [
+						"v1",
+						"customers",
+						"search"
+					],
+					"query": [
+						{
+							"key": "searchKey",
+							"value": "arewatkar@webuy.com",
+							"disabled": true
+						},
+						{
+							"key": "firstName",
+							"value": "Ganesh",
+							"description": "TU0 02N",
+							"disabled": true
+						},
+						{
+							"key": "lastName",
+							"value": "rewatkarrewatkarrewatkaryyuhbmr",
+							"description": "9876543211",
+							"disabled": true
+						},
+						{
+							"key": "postcode",
+							"value": "uk",
+							"description": "2147483640 ",
+							"disabled": true
+						},
+						{
+							"key": "phoneMobile",
+							"value": "65765675675677676576732",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "gjadhav@webuy.com",
+							"disabled": true
+						},
+						{
+							"key": "cardNumber",
+							"value": "4444333322221111",
+							"disabled": true
+						},
+						{
+							"key": "customerNumber",
+							"value": "AB8158898",
+							"disabled": true
+						},
+						{
+							"key": "town",
+							"value": "mumbai",
+							"disabled": true
+						},
+						{
+							"key": "county",
+							"value": "in",
+							"disabled": true
+						},
+						{
+							"key": "taxId",
+							"value": "757567",
+							"disabled": true
+						},
+						{
+							"key": "accountStatus",
+							"value": "3",
+							"disabled": true
+						},
+						{
+							"key": "branchKey",
+							"value": "AB",
+							"disabled": true
+						},
+						{
+							"key": "isReturnTotalRecords",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "Mr",
+							"disabled": true
+						},
+						{
+							"key": "filterLinkedRecords",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "platformId",
+							"value": "22"
+						},
+						{
+							"key": "idDetail",
+							"value": "ABC123456",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "workstation",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{uni.cex.uk}}/{{umid}}/idproofs",
+			"id": "1d7a3319-b6ae-4c9c-88e2-04da003aecbc",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "workstation",
+							"value": "WSS",
+							"type": "text"
+						},
+						{
+							"key": "memberIdProofsData",
+							"value": "[{\"idType\":\"3\",\"idMod\":\"1\",\"idData\":\"123123\",\"addedBy\":\"12\",\"idIssuedBy\":\"   ssdd\",\"idExpiryDate\":\"2024-11-22\",\"proofIdNumber\":1,\"isVerified\":\"0\"}]",
+							"type": "text"
+						},
+						{
+							"key": "dob",
+							"value": "1999-02-12",
+							"type": "text"
+						},
+						{
+							"key": "versionNumber",
+							"value": "0.0.1",
+							"type": "text"
+						},
+						{
+							"key": "platformId",
+							"value": "18",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{uni.cex.uk}}/{{umid}}/idproofs"
+			},
+			"response": []
+		}
+	]
+}
