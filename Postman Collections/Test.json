@@ -1,0 +1,370 @@
+{
+	"info": {
+		"_postman_id": "20d530a5-4254-4e60-b6a2-da2fad390ece",
+		"name": "Basket",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "v3/basket/{id}",
+			"id": "635fc8b3-f686-488e-9d86-ee17db0de003",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://uat-wss2.cex.uk.webuy.ws.qa1/v3/basket/11146125?memberId=11146125&accessToken={{token}}",
+					"protocol": "http",
+					"host": [
+						"uat-wss2",
+						"cex",
+						"uk",
+						"webuy",
+						"ws",
+						"qa1"
+					],
+					"path": [
+						"v3",
+						"basket",
+						"11146125"
+					],
+					"query": [
+						{
+							"key": "mode",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "memberId",
+							"value": "11146125"
+						},
+						{
+							"key": "accessToken",
+							"value": "{{token}}"
+						}
+					]
+				},
+				"description": "http://dev-wss2.cex.uk.webuy.local/v3/basket/1113625"
+			},
+			"response": []
+		},
+		{
+			"name": "v3/basket/{id}",
+			"id": "fbb37bb0-1f90-4641-93d6-490d6b0187cd",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "bulkItemData",
+							"value": "{\"wesellItems\":[{\"boxId\":\"885909283385\",\"boxId\":\"STACAPPIP2SCPGRN\",\"quantity\":1}],\"webuyItems\":[]}",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "isBulk",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "mode",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "boxId",
+							"value": "sx360s250a",
+							"description": "UK",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "quantity",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "boxId",
+							"value": "33590260006613207210121059",
+							"description": "sbrebasdoubrepuma",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "boxId",
+							"value": "sbotttctnppmb",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "boxId",
+							"value": "5017239160127",
+							"description": "NL",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "boxId",
+							"value": "sfigbbujunferdasdrib",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "boxId",
+							"value": "sbhugbluhat69mn",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "boxId",
+							"value": "SACCBABO2MXPBLA01",
+							"description": "kidx",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "boxId",
+							"value": "5030917125850",
+							"description": "UK",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "boxId",
+							"value": "4515260011742",
+							"description": "NL",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "boxId",
+							"value": "slapappmba52i5189a",
+							"description": "pl",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "boxId",
+							"value": "SMEMMSD64",
+							"description": "pl",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "boxId",
+							"value": "soutfisprilaulea",
+							"description": "kidx",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "boxId",
+							"value": "sintmegblo100pieb",
+							"description": "Kidx",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "SACCBABO2MXPBLA01",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "boxId",
+							"value": "5030917103766",
+							"description": "IC",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "boxId",
+							"value": "619659022990",
+							"description": "MX",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "boxId",
+							"value": "5030930021757",
+							"description": "UK",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "boxId",
+							"value": "SHANLOU394238",
+							"type": "text"
+						},
+						{
+							"key": "memberId",
+							"value": "",
+							"description": "1118612",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://uat-wss2.dex.uk.designerexchange.ws/v3/basket/0fce2a035920492d1bfc456dad472930",
+				"description": "http://uat-wss2.cex.uk.webuy.ws/v3/basket/1117764"
+			},
+			"response": []
+		},
+		{
+			"name": "v3/basket/{id}",
+			"id": "69372aae-e0ff-4782-836f-f2c79bc8c457",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "bulkItemData",
+							"value": "{\"wesellItems\":[{\"boxId\":\"5051892164726\",\"quantity\":1},\n{\"boxId\":\"5050582769302\",\"quantity\":2},\n{\"boxId\":\"5051892164726\",\"quantity\":2}],\"webuyItems\":[{\"boxId\":\"5050582769302\",\"quantity\":2},{\"boxId\":\"5051892164726\",\"quantity\":2}]}",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "isBulk",
+							"value": "000001",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "mode",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "boxId",
+							"value": "5050582769302",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "deliveryMethodId",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://uat-wss2.dex.uk.designerexchange.ws.qa2/v3/basket/G6asahghg",
+				"description": "http://dev-wss2.cex.uk.webuy.local/v3/basket/123456789"
+			},
+			"response": []
+		},
+		{
+			"name": "v3/basket/{id}",
+			"id": "3a3ef850-2193-4fb2-b722-68ac770e0937",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "bulkItemData",
+							"value": "{\"wesellItems\":[\"SPS312GSSB001\"],\"webuyItems\":[]}",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "isBulk",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "mode",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "boxId",
+							"value": "711719147282",
+							"type": "text"
+						},
+						{
+							"key": "memberId",
+							"value": "34570",
+							"description": "SPS312GSSB001",
+							"type": "text"
+						},
+						{
+							"key": "accessToken",
+							"value": "{{token}}",
+							"type": "text"
+						},
+						{
+							"key": "isBulk",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "deliveryMethodId",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://uat-wss2.cex.in.webuy.ws.qa2/v3/basket/34570",
+				"description": "http://dev-wss2.cex.uk.webuy.local/v3/basket/123456789"
+			},
+			"response": []
+		},
+		{
+			"name": "v3/basket/{$cartId}/itemscount",
+			"id": "b8134c30-8a3e-4b2e-8942-34c22acc24a0",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://uat-wss2.cex.uk.webuy.ws.qa1/v3/basket/88/itemscount",
+				"description": "http://uat-wss2.cex.uk.webuy.ws.pcore/v3/basket/123456789/itemscount"
+			},
+			"response": []
+		}
+	]
+}
