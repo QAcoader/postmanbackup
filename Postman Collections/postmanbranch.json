@@ -685,6 +685,18 @@
 										"type": "text/javascript",
 										"packages": {}
 									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "bcea409b-1f1a-45b5-b0d3-30b3931cc3d1",
+										"exec": [
+											"pm.globals.unset(\"totalSellCost\");",
+											"pm.collectionVariables.set('amount', jsonData.totalSellCost);"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
 								}
 							],
 							"id": "7e3b0679-c03f-4618-a0c7-5b47fc6f5a82",
