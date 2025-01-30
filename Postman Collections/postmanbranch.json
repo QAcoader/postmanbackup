@@ -691,10 +691,18 @@
 									"script": {
 										"id": "bcea409b-1f1a-45b5-b0d3-30b3931cc3d1",
 										"exec": [
+											"// Parse the response body as JSON",
+											"let response = pm.response.json();",
 											"",
-											"var jsonData = res.json();",
-											"pm.globals.unset(\"totalSellCost\");",
-											"pm.collectionVariables.set('amount', jsonData.totalSellCost);"
+											"// Extract the totalSellCost from the response",
+											"let totalSellCost = response.response.data.wesellItems.totalSellCost;",
+											"",
+											"// Save the totalSellCost value in a Postman environment or global variable",
+											"pm.environment.set(\"totalSellCost\", totalSellCost);",
+											"",
+											"// Optional: log the value to the console for debugging",
+											"console.log(\"Total Sell Cost:\", totalSellCost);",
+											""
 										],
 										"type": "text/javascript",
 										"packages": {}
