@@ -641,6 +641,96 @@
 								"url": "https://wss1.uat-wss2.cex.nl.webuy.dev/v3/basket/522625004516937967"
 							},
 							"response": []
+						},
+						{
+							"name": "v3/basket/{id}",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "e8b0b0ba-0e7a-4d51-83f3-9f892957a8e1",
+										"exec": [
+											"pm.sendRequest({",
+											"    url: 'https://uat-oauth2.cex.nl.webuy.dev/token',",
+											"    method: 'POST',",
+											"    header: {",
+											"        'Content-Type': 'application/x-www-form-urlencoded'  // Form data for token requests",
+											"    },",
+											"    body: {",
+											"        mode: 'urlencoded',",
+											"        urlencoded: [",
+											"            { key: 'client_id', value: 'cex' },",
+											"            { key: 'client_secret', value: 'cexsecret' },",
+											"            { key: 'grant_type', value: 'password' },",
+											"            { key: 'username', value: 'gjadhav@webuy.com' },",
+											"            { key: 'password', value: '1234567' }",
+											"        ]",
+											"    }",
+											"}, function (err, res) {",
+											"    if (err) {",
+											"        console.log('Error fetching token:', err);",
+											"    } else {",
+											"        var jsonData = res.json();",
+											"        if (jsonData.access_token) {",
+											"            pm.environment.set('accessToken', jsonData.access_token);  // Store token in environment variable",
+											"            // Alternatively, use ",
+											"            pm.collectionVariables.set('accessToken', jsonData.access_token);",
+											"        } else {",
+											"            console.log('Token not found in response:', res.text());",
+											"        }",
+											"    }",
+											"    ",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "7e3b0679-c03f-4618-a0c7-5b47fc6f5a82",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://wss1.uat-wss2.cex.nl.webuy.dev/v3/basket/522625004516937967?memberId=522625004516937967&accessToken={{accessToken}}",
+									"protocol": "https",
+									"host": [
+										"wss1",
+										"uat-wss2",
+										"cex",
+										"nl",
+										"webuy",
+										"dev"
+									],
+									"path": [
+										"v3",
+										"basket",
+										"522625004516937967"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "2",
+											"disabled": true
+										},
+										{
+											"key": "memberId",
+											"value": "522625004516937967"
+										},
+										{
+											"key": "accessToken",
+											"value": "{{accessToken}}"
+										}
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "0e00dff1-2991-446b-bda2-220bc31ecd80"
