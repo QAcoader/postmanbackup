@@ -19,7 +19,12 @@
 									"script": {
 										"id": "299b4c83-c221-4a70-b7c7-ffa0349043e3",
 										"exec": [
-											""
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"pm.test(\"Response time is less than 200ms\", function () {",
+											"    pm.expect(pm.response.responseTime).to.be.below(200);",
+											"});"
 										],
 										"type": "text/javascript",
 										"packages": {}
@@ -315,7 +320,11 @@
 											"",
 											"// Optional: log the value to the console for debugging",
 											"console.log(\"Total Sell Cost:\", totalSellCost);",
-											""
+											"",
+											"",
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
 										],
 										"type": "text/javascript",
 										"packages": {}
@@ -375,7 +384,9 @@
 									"script": {
 										"id": "a7f7cb16-e06a-4446-9eb4-c80d616fd086",
 										"exec": [
-											""
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
 										],
 										"type": "text/javascript",
 										"packages": {}
