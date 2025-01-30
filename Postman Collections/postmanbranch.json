@@ -691,6 +691,8 @@
 									"script": {
 										"id": "bcea409b-1f1a-45b5-b0d3-30b3931cc3d1",
 										"exec": [
+											"",
+											"var jsonData = res.json();",
 											"pm.globals.unset(\"totalSellCost\");",
 											"pm.collectionVariables.set('amount', jsonData.totalSellCost);"
 										],
