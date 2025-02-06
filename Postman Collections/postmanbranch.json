@@ -8918,6 +8918,128 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "https://uat1-wss2.cex.mx.webuy.dev/v3/wesellorders/generate",
+			"id": "74b0b3ad-bc22-4e9e-b4d5-0749fd4882c0",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-US,en;q=0.9"
+					},
+					{
+						"key": "content-type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "origin",
+						"value": "https://mx.cwr1.uat.webuy.dev"
+					},
+					{
+						"key": "priority",
+						"value": "u=1, i"
+					},
+					{
+						"key": "referer",
+						"value": "https://mx.cwr1.uat.webuy.dev/buy"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not A(Brand\";v=\"8\", \"Chromium\";v=\"132\", \"Google Chrome\";v=\"132\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-site"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"type": "text",
+							"key": "accessToken",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpZCI6IjgxMDlkOGE3MWRkNzUwOWQ4ZmU0NmQ0NTUyOWZjYjFiMmZlYzcyOWQiLCJqdGkiOiI4MTA5ZDhhNzFkZDc1MDlkOGZlNDZkNDU1MjlmY2IxYjJmZWM3MjlkIiwiaXNzIjoiIiwiYXVkIjoiY2V4Iiwic3ViIjoiY2V4LW14LTUzMDI4OTQyNDU1MDMzNDYxMCIsImV4cCI6MTczODg1MDAyOCwiaWF0IjoxNzM4ODQ5OTk4LCJ0b2tlbl90eXBlIjoiYmVhcmVyIiwic2NvcGUiOm51bGx9.G4xl2T19UNQAMjB3fyhBAUXBu9rtaJZpJXB8XfNN8xlIBgso8uHmXOmus2I9rKfJURh11XND6BUUJ2FKDLtOptLqB9uPsbm6XYE0oW0uK9ZJwFdcN9Pxn7Y2eXMFUU4hkzTb9PrHYxiBzYSVG_YA8szX-fJFa8wcgXH5uuOftT3h4ccHLsxhJSJas8R9pg_K5TWnpKZ5eeTre1gpu19tZ40ZAYUPHub01DHuGBji3qsZgoVbsS-Cp2vQf_lPpBBCunFllIgVsFHOvF0NGjP3yk1Z230zYfrNeLMRNlOaSE7seoXhPUP1qpd0HTDoJhqB5YAuhgpvuaW29aZi_o-U0A"
+						},
+						{
+							"type": "text",
+							"key": "cartId",
+							"value": "530289424550334610"
+						},
+						{
+							"type": "text",
+							"key": "memberId",
+							"value": "530289424550334610"
+						},
+						{
+							"type": "text",
+							"key": "paymentId",
+							"value": "28"
+						},
+						{
+							"type": "text",
+							"key": "platformId",
+							"value": "18"
+						},
+						{
+							"type": "text",
+							"key": "totalCartAmount",
+							"value": "350"
+						},
+						{
+							"type": "text",
+							"key": "collectionFallbackOption",
+							"value": "0"
+						},
+						{
+							"type": "text",
+							"key": "deliveryAddressId",
+							"value": "929"
+						},
+						{
+							"type": "text",
+							"key": "billingAddressId",
+							"value": "929"
+						},
+						{
+							"type": "text",
+							"key": "adyenData",
+							"value": "{\"adyenPaymentId\":1}"
+						}
+					]
+				},
+				"url": "https://uat1-wss2.cex.mx.webuy.dev/v3/wesellorders/generate",
+				"description": "Generated from cURL: curl 'https://uat1-wss2.cex.mx.webuy.dev/v3/wesellorders/generate' \\\n  -H 'accept: application/json, text/plain, */*' \\\n  -H 'accept-language: en-US,en;q=0.9' \\\n  -H 'content-type: application/x-www-form-urlencoded' \\\n  -H 'origin: https://mx.cwr1.uat.webuy.dev' \\\n  -H 'priority: u=1, i' \\\n  -H 'referer: https://mx.cwr1.uat.webuy.dev/buy' \\\n  -H 'sec-ch-ua: \"Not A(Brand\";v=\"8\", \"Chromium\";v=\"132\", \"Google Chrome\";v=\"132\"' \\\n  -H 'sec-ch-ua-mobile: ?0' \\\n  -H 'sec-ch-ua-platform: \"macOS\"' \\\n  -H 'sec-fetch-dest: empty' \\\n  -H 'sec-fetch-mode: cors' \\\n  -H 'sec-fetch-site: same-site' \\\n  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36' \\\n  --data-raw 'accessToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpZCI6IjgxMDlkOGE3MWRkNzUwOWQ4ZmU0NmQ0NTUyOWZjYjFiMmZlYzcyOWQiLCJqdGkiOiI4MTA5ZDhhNzFkZDc1MDlkOGZlNDZkNDU1MjlmY2IxYjJmZWM3MjlkIiwiaXNzIjoiIiwiYXVkIjoiY2V4Iiwic3ViIjoiY2V4LW14LTUzMDI4OTQyNDU1MDMzNDYxMCIsImV4cCI6MTczODg1MDAyOCwiaWF0IjoxNzM4ODQ5OTk4LCJ0b2tlbl90eXBlIjoiYmVhcmVyIiwic2NvcGUiOm51bGx9.G4xl2T19UNQAMjB3fyhBAUXBu9rtaJZpJXB8XfNN8xlIBgso8uHmXOmus2I9rKfJURh11XND6BUUJ2FKDLtOptLqB9uPsbm6XYE0oW0uK9ZJwFdcN9Pxn7Y2eXMFUU4hkzTb9PrHYxiBzYSVG_YA8szX-fJFa8wcgXH5uuOftT3h4ccHLsxhJSJas8R9pg_K5TWnpKZ5eeTre1gpu19tZ40ZAYUPHub01DHuGBji3qsZgoVbsS-Cp2vQf_lPpBBCunFllIgVsFHOvF0NGjP3yk1Z230zYfrNeLMRNlOaSE7seoXhPUP1qpd0HTDoJhqB5YAuhgpvuaW29aZi_o-U0A&cartId=530289424550334610&memberId=530289424550334610&paymentId=28&platformId=18&totalCartAmount=350&collectionFallbackOption=0&deliveryAddressId=929&billingAddressId=929&adyenData=%7B%22adyenPaymentId%22%3A1%7D'"
+			},
+			"response": []
 		}
 	],
 	"variable": [
