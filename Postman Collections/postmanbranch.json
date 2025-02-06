@@ -8921,6 +8921,50 @@
 		},
 		{
 			"name": "https://uat1-wss2.cex.mx.webuy.dev/v3/wesellorders/generate",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "78d29817-2762-4782-8377-ee59ee95e999",
+						"exec": [
+							"",
+							"pm.sendRequest({",
+							"    url: 'https://uat-oauth2.cex.mx.webuy.dev/token',",
+							"    method: 'POST',",
+							"    header: {",
+							"        'Content-Type': 'application/x-www-form-urlencoded'  // Form data for token requests",
+							"    },",
+							"    body: {",
+							"        mode: 'urlencoded',",
+							"        urlencoded: [",
+							"            { key: 'client_id', value: 'cex' },",
+							"            { key: 'client_secret', value: 'cexsecret' },",
+							"            { key: 'grant_type', value: 'password' },",
+							"            { key: 'username', value: 'gjadhav@webuy.com' },",
+							"            { key: 'password', value: '12345678' }",
+							"        ]",
+							"    }",
+							"}, function (err, res) {",
+							"    if (err) {",
+							"        console.log('Error fetching token:', err);",
+							"    } else {",
+							"        var jsonData = res.json();",
+							"        if (jsonData.access_token) {",
+							"            pm.environment.set('accessToken', jsonData.access_token);  // Store token in environment variable",
+							"            // Alternatively, use ",
+							"            pm.collectionVariables.set('accessToken', jsonData.access_token);",
+							"        } else {",
+							"            console.log('Token not found in response:', res.text());",
+							"        }",
+							"    }",
+							"    ",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"id": "74b0b3ad-bc22-4e9e-b4d5-0749fd4882c0",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -8987,7 +9031,7 @@
 						{
 							"type": "text",
 							"key": "accessToken",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpZCI6IjgxMDlkOGE3MWRkNzUwOWQ4ZmU0NmQ0NTUyOWZjYjFiMmZlYzcyOWQiLCJqdGkiOiI4MTA5ZDhhNzFkZDc1MDlkOGZlNDZkNDU1MjlmY2IxYjJmZWM3MjlkIiwiaXNzIjoiIiwiYXVkIjoiY2V4Iiwic3ViIjoiY2V4LW14LTUzMDI4OTQyNDU1MDMzNDYxMCIsImV4cCI6MTczODg1MDAyOCwiaWF0IjoxNzM4ODQ5OTk4LCJ0b2tlbl90eXBlIjoiYmVhcmVyIiwic2NvcGUiOm51bGx9.G4xl2T19UNQAMjB3fyhBAUXBu9rtaJZpJXB8XfNN8xlIBgso8uHmXOmus2I9rKfJURh11XND6BUUJ2FKDLtOptLqB9uPsbm6XYE0oW0uK9ZJwFdcN9Pxn7Y2eXMFUU4hkzTb9PrHYxiBzYSVG_YA8szX-fJFa8wcgXH5uuOftT3h4ccHLsxhJSJas8R9pg_K5TWnpKZ5eeTre1gpu19tZ40ZAYUPHub01DHuGBji3qsZgoVbsS-Cp2vQf_lPpBBCunFllIgVsFHOvF0NGjP3yk1Z230zYfrNeLMRNlOaSE7seoXhPUP1qpd0HTDoJhqB5YAuhgpvuaW29aZi_o-U0A"
+							"value": "{{accessToken}}"
 						},
 						{
 							"type": "text",
