@@ -399,7 +399,7 @@
 										"exec": [
 											"",
 											"pm.sendRequest({",
-											"    url: 'https://uat-oauth2.cex.nl.webuy.dev/token',",
+											"    url: 'https://uat-oauth2.cex.mx.webuy.dev/token',",
 											"    method: 'POST',",
 											"    header: {",
 											"        'Content-Type': 'application/x-www-form-urlencoded'  // Form data for token requests",
@@ -411,7 +411,7 @@
 											"            { key: 'client_secret', value: 'cexsecret' },",
 											"            { key: 'grant_type', value: 'password' },",
 											"            { key: 'username', value: 'gjadhav@webuy.com' },",
-											"            { key: 'password', value: '1234567' }",
+											"            { key: 'password', value: '12345678' }",
 											"        ]",
 											"    }",
 											"}, function (err, res) {",
@@ -465,7 +465,7 @@
 										},
 										{
 											"key": "totalCartAmount",
-											"value": "{{totalSellCost}}",
+											"value": "110",
 											"type": "text"
 										},
 										{
@@ -544,7 +544,7 @@
 										}
 									]
 								},
-								"url": "https://wss1.uat-wss2.cex.nl.webuy.dev/v3/wesellorders/generate"
+								"url": "https://wss1.uat-wss2.cex.mx.webuy.dev/v3/wesellorders/generate"
 							},
 							"response": []
 						},
